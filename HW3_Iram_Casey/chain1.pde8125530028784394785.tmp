@@ -1,0 +1,21 @@
+void chain1() {
+  //move center point
+  float deltaX = head.x - chain1.x;
+  float deltaY = head.y - chain1.y;
+
+
+  // create springing effect
+  deltaX *= springing;
+  deltaY *= springing;
+
+  chain1Spd.x += deltaX;
+  chain1Spd.y += deltaY;
+
+  // move predator's center
+  //chain1.x +=  chain1Spd.x;
+  chain1.y +=  chain1Spd.y;
+
+  // slow down springing
+  //chain1Spd.x *= springDamping;
+  //chain1Spd.y *= springDamping;
+}
